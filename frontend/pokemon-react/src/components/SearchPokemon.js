@@ -13,7 +13,8 @@ const SearchPokemon = props => {
 
       const responseData = await response.json();
       console.log(responseData);
-      props.onAddSearchedPokemon(responseData.pokemon);
+      var filteredPokemon = responseData.pokemon.filter(pokemon => pokemon.name === enteredText);
+      props.onAddSearchedPokemon(filteredPokemon);
     } catch (err) {
       console.log(err);
     }

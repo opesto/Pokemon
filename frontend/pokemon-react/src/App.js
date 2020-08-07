@@ -33,7 +33,6 @@ const App = () => {
 
       const responseData = await response.json();
       console.log(responseData);
-      setMyPokemon(myPokemon);
     } catch (err) {
       console.log(err);
     }
